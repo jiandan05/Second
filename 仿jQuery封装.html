@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				width: 100px;
+				height: 100px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		测试文字
+		<div id="d1"></div>
+		<div id="d2">
+		<span class="s1">这是span</span>
+		</div>
+	</body>
+	<script src="js/myJquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$(function(){
+		alert("DOM加载完毕");
+	
+		$(document.body).css("background-color","red");
+		$("#d1").hover(function(){
+			$("#d1").css("background-color","blue");
+		},function(){
+			$("#d1").css("background-color","black");
+		});
+		$("#d2").css("height","100px");
+		$("#d2").css("border","2px solid black");
+		$("#d2 .s1").css("color","burlywood");
+		
+		});
+		
+	</script>
+</html>
