@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		/*创建元素 并添加到文档*/
+		/*添加 $('a').append(b) b元素添加到a元素的后面*/
+		var p = $("<p>HAPPY</p>");
+		$('body').append(p);
+		/*添加 $('a').appendTo(b) 将a元素添加到b元素的最后*/
+		var p1 =$("<p>DOM</p>");
+		p1.appendTo($('body'));
+		/*$(a).prepend(b)在a元素内部的前面添加b元素*/
+		var s1 = $("<span>拼接</span>");
+		p1.prepend(s1);
+		/*$(a).prependTo(b)在b元素内部的后面添加a元素*/
+		/*$(a).after(b)在a元素外部的后面添加b元素*/
+		var a = $("<a href='#'>啊啊</a>")
+		p.after(a);
+		/*$(a).insertAfter(b)将a元素添加到b元素外部的后面*/
+		/*$(a).before(b) 在a元素外部的前面添加元素b*/
+		/*$(a).insertBefore(b)将a元素添加到b元素外部的前面*/
+		/*删除元素
+		 * 删除指定元素
+		 * remove()其他的比如绑定的事件，附加的数据等都会被移除
+		 * detach()所有绑定的事件、附加的数据等都会保留下来
+		 * 删除元素内的所有子节点
+		 * empty()
+		 */
+		p1.remove();
+//		p1.detach();
+//		$('body').empty();
+	</script>
+</html>
